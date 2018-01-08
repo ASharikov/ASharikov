@@ -23,7 +23,7 @@ public class Triangle {
      * @return Перимент.
      */
     public double period(double ab, double ac, double bc) {
-        return (ab + ac +bc) /2;
+        return (ab + ac + bc) / 2;
     }
 
     /**
@@ -49,8 +49,8 @@ public class Triangle {
         double bc = this.b.distanceTo(this.c);
         double p = this.period(ab, ac, bc);
 
-        if(this.exist(ab, ac, bc)) {
-            rls = Math.sqrt(p*(p-bc)*(p-ac)*(p-ab));
+        if (this.exist(ab, ac, bc)) {
+            rls = Math.sqrt(p * (p - bc) * (p - ac) * (p - ab));
         }
         return rls;
     }
