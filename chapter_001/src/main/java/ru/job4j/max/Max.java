@@ -1,4 +1,11 @@
 package ru.job4j.max;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
+
 /**
  * @author Alexander Sharikov (alexsander.sharikov@yandex.ru)
  * @version $Id$
@@ -11,5 +18,12 @@ public class Max {
      */
     public int max(int first, int second) {
         return first > second ? first : second;
+    }
+
+    public int max(int first, int second, int thrid) {
+
+        List<Integer> integerList = Arrays.asList(first, second, thrid);
+
+        return integerList.stream().max(Integer::compareTo).get();
     }
 }
