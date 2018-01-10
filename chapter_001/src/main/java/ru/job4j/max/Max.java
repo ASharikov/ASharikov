@@ -19,9 +19,14 @@ public class Max {
     }
 
     public int max(int first, int second, int thrid) {
+        //Вариант 1
+        //List<Integer> integerList = Arrays.asList(first, second, thrid);
+        //return integerList.stream().max(Integer::compareTo).get();
 
-        List<Integer> integerList = Arrays.asList(first, second, thrid);
+        //Вариант 2
+        //return Math.max(first, Math.max(second, thrid));
 
-        return integerList.stream().max(Integer::compareTo).get();
+        //Вариант 3
+        return (Math.abs(2 * thrid - Math.abs(second - first) - second - first) + 2 * thrid + Math.abs(second - first) + second + first) / 4;
     }
 }
