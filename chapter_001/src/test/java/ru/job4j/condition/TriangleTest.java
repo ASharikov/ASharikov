@@ -21,4 +21,21 @@ public class TriangleTest {
         // проверяем результат и ожидаемое значение.
         assertThat(result, closeTo(expected, 0.1));
     }
+
+    @Test
+    public void whenPointsOnLineThenNotTriangleArea() {
+        // создаем три объекта класс Point.
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 3);
+        Point c = new Point(0, 2);
+
+        // создаем объетк треугольник и передаем внего объекты точек.
+        Triangle triangle = new Triangle(a, b, c);
+        // вычисляем площадь.
+        double result = triangle.area();
+        // Задаем ожидаемый результат.
+        double expected = -1D;
+        // проверяем результат и ожидаемое значение.
+        assertThat(result, closeTo(expected, 0.1));
+    }
 }
