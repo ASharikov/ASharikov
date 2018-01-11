@@ -34,7 +34,7 @@ public class Triangle {
      * @param bc длина от точки b c.
      */
     private boolean exist(double ab, double ac, double bc) {
-        return ab > 0 & ac > 0 & bc > 0;
+        return ab > 0 && ac > 0 && bc > 0 && (ab + bc) != ac && (ac + bc) != ab  && (ab + ac) != bc;
     }
 
     /**
