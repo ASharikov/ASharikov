@@ -8,8 +8,8 @@ public class SquareTest {
     @Test
     public void whenGetFourThenMassivOneToFour() {
        Square square = new Square();
-       int rst[] = square.calculate(4);
-       int expected[] = {1, 2, 3, 4};
+       int[] rst = square.calculate(4);
+       int[] expected = {1, 2, 3, 4};
         assertThat(rst, is(expected));
     }
 }
