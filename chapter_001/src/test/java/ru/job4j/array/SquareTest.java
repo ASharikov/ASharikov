@@ -9,7 +9,7 @@ public class SquareTest {
     public void whenGetFourThenMassivOneToFour() {
        Square square = new Square();
        int[] rst = square.calculate(4);
-       int[] expected = {1, 2, 3, 4};
+       int[] expected = {1, 4, 9, 16};
         assertThat(rst, is(expected));
     }
 }
