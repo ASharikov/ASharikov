@@ -9,7 +9,7 @@ public class ArrayDuplicateTest {
     public void whenRemoveDuplicatesThenArrayWithoutDuplicate() {
         ArrayDuplicate arrayDuplicate = new ArrayDuplicate();
         String[] rst = arrayDuplicate.remove(new String[] {"Привет", "Мир", "Привет", "Супер", "Мир"});
-        String[] expected = {"Привет", "Мир", "Супер"};
+        String[] expected = {"Привет", "Супер", "Мир"};
         assertThat(rst, is(expected));
     }
 
@@ -33,6 +33,14 @@ public class ArrayDuplicateTest {
     public void whenRemoveDuplicatesThenArrayWithoutDuplicate4() {
         ArrayDuplicate arrayDuplicate = new ArrayDuplicate();
         String[] rst = arrayDuplicate.remove(new String[] {"Привет", "Привет"});
+        String[] expected = {"Привет"};
+        assertThat(rst, is(expected));
+    }
+
+    @Test
+    public void whenRemoveDuplicatesThenArrayWithoutDuplicate5() {
+        ArrayDuplicate arrayDuplicate = new ArrayDuplicate();
+        String[] rst = arrayDuplicate.remove(new String[] {"Привет", "Привет", "Привет"});
         String[] expected = {"Привет"};
         assertThat(rst, is(expected));
     }
