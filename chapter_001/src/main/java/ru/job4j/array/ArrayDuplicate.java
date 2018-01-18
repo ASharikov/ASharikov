@@ -1,6 +1,5 @@
 package ru.job4j.array;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class ArrayDuplicate {
@@ -9,7 +8,7 @@ public class ArrayDuplicate {
         for (int i = count; i >= 0; i--) {
             int countFind = 0;
             for (int j = 0; j < i; j++) {
-                if (array[i] == array[j]) {
+                if (array[i].equals(array[j])) {
                     if (i != count) {
                         String tmp = array[j];
                         array[j] = array[count];
