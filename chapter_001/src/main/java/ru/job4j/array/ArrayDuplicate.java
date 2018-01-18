@@ -5,17 +5,22 @@ import java.util.Arrays;
 
 public class ArrayDuplicate {
     public String[] remove(String[] array) {
-        int countDub = 0;
-        for (int i = 0; i < array.length - countDub - 1; i++) {
-            for (int j = 0; j < array.length - countDub; j++) {
-                if (array[i] == array[j + 1]) {
-                    String tmp = array[j + 1];
-                    array[j + 1] = array[array.length - 1 - countDub];
-                    array[array.length - 1 - countDub] = tmp;
-                    countDub++;
+        int count = array.length - 1;
+        for (int i = count; i >= 0; i--) {
+            int countFind = 0;
+            for (int j = 0; j < i; j++) {
+                if (array[i] == array[j]) {
+                    if (i != count) {
+                        String tmp = array[j];
+                        array[j] = array[count];
+                        array[count] = tmp;
+                        countFind++;
+                    }
+                    count--;
                 }
             }
+            i = i - countFind;
         }
-        return Arrays.copyOf(array, array.length - countDub);
+        return Arrays.copyOf(array, count + 1);
     }
 }
